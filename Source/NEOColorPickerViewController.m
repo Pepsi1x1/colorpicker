@@ -163,7 +163,7 @@
 
 
 - (IBAction)buttonPressDone:(id)sender {
-    [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
+    [super buttonPressDone:sender];
 }
 
 

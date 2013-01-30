@@ -106,6 +106,7 @@
 
 
 - (IBAction)buttonPressDone:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"didSelectColor" object:self userInfo:[[NSDictionary alloc] initWithObjects:@[self.selectedColor] forKeys:@[@"selectedColor"]]];
     if (self.delegate) {
         [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
     }

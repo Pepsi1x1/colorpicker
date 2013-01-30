@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1C341B16B7D51500486F1C /* ISColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1C341916B7D0A100486F1C /* ISColorWheel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9EBDE20F168DFCAF0081C060 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE20E168DFCAF0081C060 /* UIKit.framework */; };
 		9EBDE211168DFCAF0081C060 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE210168DFCAF0081C060 /* Foundation.framework */; };
 		9EBDE213168DFCAF0081C060 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBDE212168DFCAF0081C060 /* CoreGraphics.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C1C341816B7D0A100486F1C /* ISColorWheel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISColorWheel.h; sourceTree = "<group>"; };
+		5C1C341916B7D0A100486F1C /* ISColorWheel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISColorWheel.m; sourceTree = "<group>"; };
 		9EBDE20A168DFCAF0081C060 /* ColorPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBDE20E168DFCAF0081C060 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EBDE210168DFCAF0081C060 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +168,8 @@
 				9EBDE269168E01550081C060 /* NEOColorPickerViewController.xib */,
 				9EBDE278168E02970081C060 /* UIColor+NEOColor.h */,
 				9EBDE279168E02970081C060 /* UIColor+NEOColor.m */,
+				5C1C341816B7D0A100486F1C /* ISColorWheel.h */,
+				5C1C341916B7D0A100486F1C /* ISColorWheel.m */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1C341B16B7D51500486F1C /* ISColorWheel.m in Sources */,
 				9EBDE21B168DFCAF0081C060 /* main.m in Sources */,
 				9EBDE21F168DFCAF0081C060 /* NEOAppDelegate.m in Sources */,
 				9EBDE228168DFCAF0081C060 /* TestViewController.m in Sources */,

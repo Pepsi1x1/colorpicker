@@ -80,7 +80,7 @@
     if (!self.hidden) {
         if (!self.selectorView) {
             UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:CP_RESOURCE_GRADIENT_TRACKER]];
-            view.frame = CGRectMake(0, self.frame.origin.y, 14, 40);
+            view.frame = CGRectMake(0, self.frame.origin.y, 14, self.frame.size.height);
             [self.superview addSubview:view];
             self.selectorView = view;
         }

@@ -51,7 +51,11 @@
     }
     
     [super viewDidLoad];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     self.navigationBar.topItem.title = self.dialogTitle;
     self.checkeredView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:CP_RESOURCE_CHECKERED_IMAGE]];
     self.hueImageView.image = [UIImage imageNamed:CP_RESOURCE_HUE_CIRCLE];

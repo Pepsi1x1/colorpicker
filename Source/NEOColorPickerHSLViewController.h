@@ -25,15 +25,16 @@
 
 #import <UIKit/UIKit.h>
 #import "NEOColorPickerBaseViewController.h"
+#import "ISColorWheel.h"
 
 
 @class NEOColorPickerGradientView;
 
 
-@interface NEOColorPickerHSLViewController : NEOColorPickerBaseViewController
+@interface NEOColorPickerHSLViewController : NEOColorPickerBaseViewController <ISColorWheelDelegate>
 
+@property (strong, nonatomic) ISColorWheel *colorWheel;
 @property (weak, nonatomic) IBOutlet UIImageView *hueImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *hueCrosshair;
 @property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewSaturation;
 @property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewLuminosity;
 @property (weak, nonatomic) IBOutlet NEOColorPickerGradientView *gradientViewAlpha;

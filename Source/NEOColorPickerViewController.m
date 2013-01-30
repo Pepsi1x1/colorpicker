@@ -208,7 +208,7 @@
     NEOColorPickerFavoritesViewController *controller = [[NEOColorPickerFavoritesViewController alloc] init];
     controller.delegate = self;
     controller.selectedColor = self.selectedColor;
-    controller.dialogTitle = @"Favorites";
+    controller.dialogTitle = @"Recent Colours";
     [self presentViewController:controller animated:YES completion:nil];
 }
 

@@ -67,7 +67,8 @@
 
 
 - (void)addFavorite:(UIColor *)color {
-    [_favorites addObject:color];
+    [_favorites removeObject:color];
+    [_favorites insertObject:color atIndex:0];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_favorites];
     NSString *filename = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"neoFavoriteColors.data"];
     [data writeToFile:filename atomically:YES];
@@ -110,6 +111,7 @@
 
 
 - (IBAction)buttonPressDone:(id)sender {
+    [[NEOColorPickerFavoritesManager instance] addFavorite:self.selectedColor];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"didSelectColor" object:self userInfo:[[NSDictionary alloc] initWithObjects:@[self.selectedColor] forKeys:@[@"selectedColor"]]];
     if (self.delegate) {
         [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];

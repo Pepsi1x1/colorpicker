@@ -47,10 +47,14 @@
         NSFileManager *fs = [NSFileManager defaultManager];
         NSString *filename = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"neoFavoriteColors.data"];
         if ([fs isReadableFileAtPath:filename]) {
-            _favorites = [[NSMutableOrderedSet alloc] initWithOrderedSet:[NSKeyedUnarchiver unarchiveObjectWithFile:filename]];
-        } else {
-            _favorites = [[NSMutableOrderedSet alloc] init];            
+            id data = [NSKeyedUnarchiver unarchiveObjectWithFile:filename];
+            if ([data isKindOfClass:[NSMutableOrderedSet class]])
+            {
+                _favorites = [[NSMutableOrderedSet alloc] initWithOrderedSet:data];
+                return self;
+            }
         }
+        _favorites = [[NSMutableOrderedSet alloc] init];
     }
     
     return self;
@@ -111,7 +115,6 @@
         [self.delegate colorPickerViewController:self didSelectColor:self.selectedColor];
     }
 }
-
 
 
 - (void) setupShadow:(CALayer *)layer {
